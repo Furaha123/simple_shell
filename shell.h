@@ -19,28 +19,17 @@
 
 /* for command chaining */
 #define CMD_NORM	0
-<<<<<<< HEAD
 #define CMD_OR		1
 #define CMD_AND		2
 #define CMD_CHAIN	3
-=======
-#define CMD_OR	        1
-#define CMD_AND	        2
-#define CMD_CHAIN       3
->>>>>>> a70c8ce4289ca39da06a4611641e32a62d9eb372
 
 /* for convert_number() */
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
 
 /* 1 if using system getline() */
-<<<<<<< HEAD
 #define USE_GETLINE 0
 #define USE_STRTOK 0
-=======
-#define USE_GETLINE	0
-#define USE_STRTOK	0
->>>>>>> a70c8ce4289ca39da06a4611641e32a62d9eb372
 
 #define HIST_FILE	".simple_shell_history"
 #define HIST_MAX	4096
@@ -62,9 +51,8 @@ typedef struct liststr
 } list_t;
 
 /**
-<<<<<<< HEAD
  * struct passinfo - contains pseudo-arguements to pass into a function,
- * allowing uniform prototypes for functions  pointer struct
+ * allowing uniform prototype for function pointer struct
  * @arg: a string generated from getline containing arguements
  * @argv:an array of strings generated from arg
  * @path: a string path for the current command
@@ -72,17 +60,6 @@ typedef struct liststr
  * @line_count: the error count
  * @err_num: the error code for exit()s
  * @linecount_flag: if on count this line of input
-=======
- * structr passinfo - contains pseudo-arguments to pass into a function,
- * allowing uniform prototype for function pointer struct
- * @arg: a string generated from getline containing arguments
- * @argv: an array of strings generated from arg
- * @path a string path for the current command
- * @argc: the argument count
- * @line_count: the error count
- * @err_num: the error code for exit()s
- * @linecout_flag: if on count this line of input
->>>>>>> a70c8ce4289ca39da06a4611641e32a62d9eb372
  * @fname: the program filename
  * @env: linked list local copy of environ
  * @environ: custom modified copy of environ from LL env
@@ -111,13 +88,8 @@ typedef struct passinfo
 	char **environ;
 	int env_changed;
 	int status;
-<<<<<<< HEAD
 
 	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
-=======
-	
-	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory management */
->>>>>>> a70c8ce4289ca39da06a4611641e32a62d9eb372
 	int cmd_buf_type; /* CMD_type ||, &&, ; */
 	int readfd;
 	int histcount;
@@ -125,19 +97,11 @@ typedef struct passinfo
 
 #define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-<<<<<<< HEAD
 		0, 0, 0}
 
 /**
  * struct builtin - contains a builtin string and related function
  * @type: the builtin command flag
-=======
-	0, 0, 0}
-
-/**
- * struct builtin - contains a builtin string and related function
- * type: the builtin command flag
->>>>>>> a70c8ce4289ca39da06a4611641e32a62d9eb372
  * @func: the function
  */
 typedef struct builtin
@@ -180,11 +144,7 @@ void _puts(char *);
 int _putchar(char);
 
 /* toem_exits.c */
-<<<<<<< HEAD
 char *_strncpy(char *, char *, int);
-=======
-char *_strncpy(char *, char * int);
->>>>>>> a70c8ce4289ca39da06a4611641e32a62d9eb372
 char *_strncat(char *, char *, int);
 char *_strchr(char *, char);
 
@@ -192,20 +152,12 @@ char *_strchr(char *, char);
 char **strtow(char *, char *);
 char **strtow2(char *, char);
 
-<<<<<<< HEAD
 /* toem_realloc.c */
-=======
-/*toem_realloc.c */
->>>>>>> a70c8ce4289ca39da06a4611641e32a62d9eb372
 char *_memset(char *, char, unsigned int);
 void ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
 
-<<<<<<< HEAD
 /* toem_memory.c */
-=======
-/*toem_memory.c */
->>>>>>> a70c8ce4289ca39da06a4611641e32a62d9eb372
 int bfree(void **);
 
 /* toem_atoi.c */
@@ -230,20 +182,12 @@ int _myhelp(info_t *);
 int _myhistory(info_t *);
 int _myalias(info_t *);
 
-<<<<<<< HEAD
 /*toem_getline.c */
-=======
-/* toem_getline.c */
->>>>>>> a70c8ce4289ca39da06a4611641e32a62d9eb372
 ssize_t get_input(info_t *);
 int _getline(info_t *, char **, size_t *);
 void sigintHandler(int);
 
-<<<<<<< HEAD
 /* toem_getinfo.c */
-=======
-/*toem_getinfo.c */
->>>>>>> a70c8ce4289ca39da06a4611641e32a62d9eb372
 void clear_info(info_t *);
 void set_info(info_t *, char **);
 void free_info(info_t *, int);
@@ -289,7 +233,5 @@ int replace_vars(info_t *);
 int replace_string(char **, char *);
 
 #endif
-<<<<<<< HEAD
 
-=======
->>>>>>> a70c8ce4289ca39da06a4611641e32a62d9eb372
+
